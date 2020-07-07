@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : area
+Design : CHIP
+Version: N-2017.09-SP2
+Date   : Thu Jun 18 20:37:41 2020
+****************************************
+
+Library(s) Used:
+
+    typical (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db)
+
+Number of ports:                         1487
+Number of nets:                         19408
+Number of cells:                        17870
+Number of combinational cells:          13878
+Number of sequential cells:              3989
+Number of macros/black boxes:               0
+Number of buf/inv:                       3254
+Number of references:                      97
+
+Combinational area:             112892.376316
+Buf/Inv area:                    18555.976721
+Noncombinational area:          108036.113558
+Macro/Black Box area:                0.000000
+Net Interconnect area:         2294098.409302
+
+Total cell area:                220928.489874
+Total area:                    2515026.899176
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  ---------
+CHIP                              220928.4899    100.0   29370.1122   13633.5166  0.0000  CHIP
+D_cache                            66677.2657     30.2   32837.8998   33839.3659  0.0000  cache_1
+I_cache                            61150.5313     27.7   27528.4326   33622.0987  0.0000  cache_0
+i_MIPS_register                    50097.0640     22.7   23155.9317   26941.1324  0.0000  registers
+--------------------------------  -----------  -------  -----------  -----------  ------  ---------
+Total                                                   112892.3763  108036.1136  0.0000
+
+1

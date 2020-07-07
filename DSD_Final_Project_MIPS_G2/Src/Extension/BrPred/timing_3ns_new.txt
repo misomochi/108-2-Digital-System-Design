@@ -1,0 +1,80 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CHIP
+Version: N-2017.09-SP2
+Date   : Thu Jun 18 19:16:51 2020
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: i_MIPS_id_ex_rt_o_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: i_MIPS_pc_PC_o_reg_5_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CHIP               tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  i_MIPS_id_ex_rt_o_reg_1_/CK (DFFHQX8)                   0.00       0.50 r
+  i_MIPS_id_ex_rt_o_reg_1_/Q (DFFHQX8)                    0.15       0.65 f
+  U10011/Y (XNOR2X4)                                      0.10       0.76 f
+  U9715/Y (AND4X8)                                        0.16       0.92 f
+  U9716/Y (NAND2X8)                                       0.07       0.99 r
+  U9883/Y (AND3X8)                                        0.12       1.11 r
+  U9684/Y (INVX20)                                        0.06       1.17 f
+  U9683/Y (BUFX20)                                        0.10       1.27 f
+  U7449/Y (INVX20)                                        0.04       1.31 r
+  U7473/Y (NAND2X8)                                       0.04       1.35 f
+  U7760/Y (NAND3X8)                                       0.07       1.42 r
+  U7759/Y (XOR2X4)                                        0.13       1.55 r
+  U7758/Y (OR2X8)                                         0.12       1.67 r
+  U7755/Y (NAND2X8)                                       0.05       1.72 f
+  U7954/Y (INVX16)                                        0.04       1.76 r
+  U7962/Y (NAND2X8)                                       0.04       1.80 f
+  U7754/Y (NAND2X8)                                       0.07       1.87 r
+  U7673/Y (NAND2X6)                                       0.07       1.94 f
+  U6957/Y (NAND2X4)                                       0.07       2.02 r
+  U8022/Y (NAND3X6)                                       0.08       2.09 f
+  U6145/Y (NAND2X6)                                       0.09       2.18 r
+  U7195/Y (INVX16)                                        0.05       2.23 f
+  U9841/Y (AND2X8)                                        0.09       2.32 f
+  U6081/Y (NAND2X6)                                       0.05       2.36 r
+  U7558/Y (NAND3X6)                                       0.05       2.41 f
+  U7650/Y (XOR2X4)                                        0.08       2.49 r
+  U8197/Y (NOR2X6)                                        0.06       2.54 f
+  U9574/Y (AND3X8)                                        0.11       2.66 f
+  U9881/Y (NAND3X8)                                       0.07       2.72 r
+  U7493/Y (MXI2X4)                                        0.16       2.88 r
+  U8418/Y (AND2X8)                                        0.16       3.04 r
+  U10488/Y (BUFX20)                                       0.13       3.17 r
+  U11075/Y (AOI2BB2X4)                                    0.07       3.24 f
+  U6943/Y (NAND4X4)                                       0.08       3.32 r
+  i_MIPS_pc_PC_o_reg_5_/D (DFFHQX8)                       0.00       3.32 r
+  data arrival time                                                  3.32
+
+  clock CLK (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.50       3.50
+  clock uncertainty                                      -0.10       3.40
+  i_MIPS_pc_PC_o_reg_5_/CK (DFFHQX8)                      0.00       3.40 r
+  library setup time                                     -0.08       3.32
+  data required time                                                 3.32
+  --------------------------------------------------------------------------
+  data required time                                                 3.32
+  data arrival time                                                 -3.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
