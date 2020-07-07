@@ -1,0 +1,109 @@
+Inferred memory devices in process
+	in routine cache line 192 in file
+		'/home/raid7_2/userb05/b05013/DSD_HW4/cache_dm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   mem_addr_r_reg    | Flip-flop |  28   |  Y  | N  | N  | N  | N  | N  | N  |
+|   mem_wdata_r_reg   | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|  current_state_reg  | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop | 1240  |  Y  | N  | N  | N  | N  | N  | N  |
+|  proc_rdata_r_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  proc_stall_r_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+****************************************
+Report : area
+Design : cache
+Version: N-2017.09-SP2
+Date   : Tue May 26 16:24:10 2020
+****************************************
+
+Library(s) Used:
+
+    typical (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db)
+
+Number of ports:                          386
+Number of nets:                          5698
+Number of cells:                         5471
+Number of combinational cells:           4040
+Number of sequential cells:              1431
+Number of macros/black boxes:               0
+Number of buf/inv:                       1517
+Number of references:                      66
+
+Combinational area:              38700.719633
+Buf/Inv area:                     8790.834643
+Noncombinational area:           38868.762001
+Macro/Black Box area:                0.000000
+Net Interconnect area:          774764.137756
+
+Total cell area:                 77569.481634
+Total area:                     852333.619391
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cache
+Version: N-2017.09-SP2
+Date   : Tue May 26 16:24:17 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: proc_addr[4]
+              (input port clocked by CLK)
+  Endpoint: block_reg[0][0]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cache              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     0.30       0.80 f
+  proc_addr[4] (in)                        0.01       0.81 f
+  U4338/Y (CLKINVX1)                       0.20       1.01 r
+  U4373/Y (CLKINVX2)                       0.30       1.31 f
+  U5305/Y (NAND3X1)                        0.36       1.67 r
+  U5034/Y (INVX4)                          0.33       2.00 f
+  U4752/Y (BUFX20)                         0.34       2.34 f
+  U5004/Y (AO22X1)                         0.29       2.63 f
+  U6256/Y (NOR4X1)                         0.40       3.03 r
+  U6257/Y (OAI22XL)                        0.19       3.21 f
+  U5444/Y (AOI221XL)                       0.35       3.56 r
+  U4340/Y (NAND4XL)                        0.18       3.75 f
+  U4329/Y (NOR3XL)                         0.42       4.17 r
+  U4326/Y (NAND3X2)                        0.29       4.46 f
+  U4325/Y (OAI21XL)                        0.40       4.86 r
+  U4324/Y (NAND2X2)                        0.32       5.19 f
+  U4323/Y (NOR2X1)                         0.61       5.80 r
+  U4374/Y (NOR2XL)                         0.27       6.07 f
+  U6718/Y (BUFX4)                          0.36       6.43 f
+  U6719/Y (NOR2X1)                         0.65       7.08 r
+  U4315/Y (BUFX20)                         0.46       7.54 r
+  U7350/Y (OAI222XL)                       0.21       7.76 f
+  block_reg[0][0]/D (DFFQX2)               0.00       7.76 f
+  data arrival time                                   7.76
+
+  clock CLK (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  block_reg[0][0]/CK (DFFQX2)              0.00      10.40 r
+  library setup time                      -0.20      10.20
+  data required time                                 10.20
+  -----------------------------------------------------------
+  data required time                                 10.20
+  data arrival time                                  -7.76
+  -----------------------------------------------------------
+  slack (MET)                                         2.44
